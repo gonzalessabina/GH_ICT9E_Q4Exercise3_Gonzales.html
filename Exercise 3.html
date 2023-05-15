@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Unit Converter</title>
+</head>
+<body>
+    <h1>Unit Converter</h1>
+    <!--Input goes here-->
+        <p>Type Desired Value: <input type="text" id="inputCentimeter"></p>
+        <input type="button" value="Convert to Feet" onclick="CentimeterTofeet()"><br><br>
+
+        <h2>The Converted Value is:</h2>
+        <p><span id="output"></span></p>
+	<script>
+        /* When the input field receives input, convert the value from Centimeter to whatever measurement */
+        function CentimeterTofeet() {
+        var cm = document.getElementById("inputCentimeter").value;
+        var ft = cm * 0.032808;
+        document.getElementById("output").innerHTML = ft;
+        }
+    </script>
+</body>
+</html>
